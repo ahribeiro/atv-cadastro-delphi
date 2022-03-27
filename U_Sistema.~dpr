@@ -1,0 +1,13 @@
+program U_Sistema;
+
+uses
+  Forms,
+  U_frmMenu in 'U_frmMenu.pas' {frmMenu};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmMenu, frmMenu);
+  Application.Run;
+end.

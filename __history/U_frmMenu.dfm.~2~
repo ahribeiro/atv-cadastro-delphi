@@ -1,0 +1,158 @@
+object frmMenu: TfrmMenu
+  Left = 318
+  Top = 152
+  Caption = 'Sistema Administrativo'
+  ClientHeight = 616
+  ClientWidth = 1289
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblCodigo: TLabel
+    Left = 296
+    Top = 56
+    Width = 57
+    Height = 20
+    Caption = 'C'#243'digo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblNome: TLabel
+    Left = 296
+    Top = 113
+    Width = 47
+    Height = 20
+    Caption = 'Nome'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblTelefone: TLabel
+    Left = 440
+    Top = 136
+    Width = 71
+    Height = 20
+    Caption = 'Telefone'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object grd1: TStringGrid
+    Left = 296
+    Top = 176
+    Width = 489
+    Height = 137
+    ColCount = 3
+    FixedCols = 0
+    RowCount = 2
+    TabOrder = 0
+    ColWidths = (
+      88
+      140
+      253)
+    RowHeights = (
+      24
+      24)
+  end
+  object edtCodigo: TEdit
+    Left = 296
+    Top = 80
+    Width = 73
+    Height = 21
+    TabOrder = 1
+  end
+  object edtNome: TEdit
+    Left = 296
+    Top = 136
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edtTelefone: TEdit
+    Left = 520
+    Top = 136
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object btnInserir: TButton
+    Left = 664
+    Top = 136
+    Width = 75
+    Height = 25
+    Caption = 'Inserir'
+    TabOrder = 4
+    OnClick = btnInserirClick
+  end
+  object btnPesquisar: TButton
+    Left = 520
+    Top = 72
+    Width = 121
+    Height = 25
+    Caption = 'Pesquisar'
+    TabOrder = 5
+  end
+  object btnAtualizar: TButton
+    Left = 656
+    Top = 72
+    Width = 129
+    Height = 25
+    Caption = 'Atualizar'
+    TabOrder = 6
+  end
+  object MainMenu1: TMainMenu
+    object Cadastro: TMenuItem
+      Caption = 'Cadastro'
+      object Cliente1: TMenuItem
+        Caption = 'Cliente'
+        OnClick = Cliente1Click
+      end
+      object Produto1: TMenuItem
+        Caption = 'Produto'
+        OnClick = Produto1Click
+      end
+      object Fornecedor1: TMenuItem
+        Caption = 'Fornecedor'
+        OnClick = Fornecedor1Click
+      end
+    end
+    object Relatrio1: TMenuItem
+      Caption = 'Relat'#243'rio'
+      object Cliente2: TMenuItem
+        Caption = 'Cliente'
+      end
+      object Fornecedor2: TMenuItem
+        Caption = 'Produto'
+      end
+      object Fornecedor3: TMenuItem
+        Caption = 'Fornecedor'
+      end
+    end
+    object Sobre1: TMenuItem
+      Caption = 'Sobre'
+      object SobreoSistema1: TMenuItem
+        Caption = 'Sobre o Sistema'
+      end
+    end
+  end
+end

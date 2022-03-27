@@ -1,0 +1,108 @@
+unit U_frmMenu;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, Grids, StdCtrls;
+
+type
+  TfrmMenu = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastro: TMenuItem;
+    Cliente1: TMenuItem;
+    Produto1: TMenuItem;
+    Fornecedor1: TMenuItem;
+    Relatrio1: TMenuItem;
+    Cliente2: TMenuItem;
+    Fornecedor2: TMenuItem;
+    Fornecedor3: TMenuItem;
+    Sobre1: TMenuItem;
+    SobreoSistema1: TMenuItem;
+    procedure Cliente1Click(Sender: TObject);
+    procedure Produto1Click(Sender: TObject);
+    procedure Fornecedor1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure btnInserirClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMenu: TfrmMenu;
+     conta : integer;
+implementation
+
+uses U_frmCliente, U_frmProduto, U_frmFornecedor;
+
+{$R *.dfm}
+
+procedure TfrmMenu.Cliente1Click(Sender: TObject);
+begin
+  if (frmCliente = Nil) then
+  begin
+  frmCliente := TfrmCliente.Create(Self);
+  frmCliente.ShowModal;
+  FreeAndNil(frmCliente);
+end;
+end;
+
+procedure TfrmMenu.Produto1Click(Sender: TObject);
+begin
+  if (frmProduto = Nil) then
+  begin
+  frmProduto := TfrmProduto.Create(Self);
+  frmProduto.ShowModal;
+  FreeAndNil(frmProduto);
+end;
+end;
+
+procedure TfrmMenu.Fornecedor1Click(Sender: TObject);
+begin
+  if (frmFornecedor = Nil) then
+  begin
+  frmFornecedor := TfrmFornecedor.Create(Self);
+  frmFornecedor.ShowModal;
+  FreeAndNil(frmFornecedor);
+end;
+end;
+
+procedure TfrmMenu.FormCreate(Sender: TObject);
+begin
+  grd1.Cells[0,0] := 'Código';
+  grd1.Cells[1,0] := 'Nome';
+  grd1.Cells[2,0] := 'Telefone';
+  conta := 1;
+  
+end;
+
+procedure TfrmMenu.FormActivate(Sender: TObject);
+begin
+  edtCodigo.SetFocus;
+end;
+
+procedure TfrmMenu.btnInserirClick(Sender: TObject);
+begin
+  grd1.Cells[0,grd1.RowCount-1] := edtCodigo.Text;
+  grd1.Cells[1,grd1.RowCount-1] := edtNome.Text;
+  grd1.Cells[2,grd1.RowCount-1] := edtTelefone.Text;
+  edtCodigo.Text  := '';
+  edtNome.Text    := '';
+  edtTelefone.Text:= '';
+  grd1.RowCount   := grd1.RowCount + 1;
+  // conta           := conta + 1;
+end;
+
+procedure TfrmMenu.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if (key = VK_Return) then
+  perform(wm_nextdlgctl,0,0);
+end;
+
+end.

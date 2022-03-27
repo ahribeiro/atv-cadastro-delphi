@@ -1,0 +1,224 @@
+object frmCliente: TfrmCliente
+  Left = 192
+  Top = 117
+  Caption = 'Cadastro de Cliente'
+  ClientHeight = 442
+  ClientWidth = 516
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -20
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 25
+  object Label1: TLabel
+    Left = 0
+    Top = 0
+    Width = 516
+    Height = 22
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Cadastro de Cliente'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitLeft = 8
+    ExplicitTop = -4
+  end
+  object lblCodigo: TLabel
+    Left = 8
+    Top = 34
+    Width = 52
+    Height = 18
+    Caption = 'C'#243'digo'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblTelefone: TLabel
+    Left = 360
+    Top = 86
+    Width = 58
+    Height = 18
+    Caption = 'Telefone'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblNome: TLabel
+    Left = 8
+    Top = 89
+    Width = 42
+    Height = 18
+    Caption = 'Nome'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object edtNome: TEdit
+    Left = 8
+    Top = 112
+    Width = 341
+    Height = 26
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    OnKeyPress = edtNomeKeyPress
+  end
+  object btnInserir: TButton
+    Left = 130
+    Top = 148
+    Width = 121
+    Height = 25
+    Caption = 'Inserir'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnInserirClick
+  end
+  object grd1: TStringGrid
+    Left = 8
+    Top = 179
+    Width = 495
+    Height = 262
+    ColCount = 3
+    FixedCols = 0
+    RowCount = 2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    ColWidths = (
+      73
+      290
+      125)
+    RowHeights = (
+      24
+      24)
+  end
+  object btnPesquisar: TButton
+    Left = 252
+    Top = 148
+    Width = 121
+    Height = 25
+    Caption = 'Pesquisar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btnPesquisarClick
+  end
+  object btnAtualizar: TButton
+    Left = 374
+    Top = 148
+    Width = 129
+    Height = 25
+    Caption = 'Atualizar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    OnClick = btnAtualizarClick
+  end
+  object btnNovo: TButton
+    Left = 8
+    Top = 148
+    Width = 121
+    Height = 25
+    Caption = 'Novo'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnNovoClick
+  end
+  object edtCodigo: TEdit
+    Left = 8
+    Top = 58
+    Width = 73
+    Height = 26
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnKeyPress = edtCodigoKeyPress
+  end
+  object edtTelefone: TMaskEdit
+    Left = 355
+    Top = 112
+    Width = 143
+    Height = 26
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    MaxLength = 11
+    ParentFont = False
+    TabOrder = 2
+    Text = ''
+    OnChange = edtTelefoneChange
+    OnExit = edtTelefoneExit
+    OnKeyPress = edtTelefoneKeyPress
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 121
+    Top = 47
+    Width = 208
+    Height = 37
+    Caption = 'Pesquisar por:'
+    Columns = 2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    ItemIndex = 0
+    Items.Strings = (
+      'C'#243'digo'
+      'Nome')
+    ParentFont = False
+    TabOrder = 8
+  end
+end
