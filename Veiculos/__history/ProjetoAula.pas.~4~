@@ -1,0 +1,76 @@
+unit ProjetoAula;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, Vcl.Mask;
+
+type
+  TForm1 = class(TForm)
+    btnInserir: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Edit6: TEdit;
+    Label6: TLabel;
+    ComboBox2: TComboBox;
+    RadioGroup1: TRadioGroup;
+    Label7: TLabel;
+    GroupBox1: TGroupBox;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    Label8: TLabel;
+    Edit7: TEdit;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Edit8: TEdit;
+    Edit9: TEdit;
+    Edit10: TEdit;
+    Edit11: TEdit;
+    MaskEdit1: TMaskEdit;
+    MaskEdit2: TMaskEdit;
+    procedure btnInserirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnInserirClick(Sender: TObject);
+begin
+
+  if (Edit7.text = '') then
+  begin
+    ShowMessage('O campo Nome está em branco');
+    Edit7.SetFocus;
+  end;
+
+end;
+
+end.

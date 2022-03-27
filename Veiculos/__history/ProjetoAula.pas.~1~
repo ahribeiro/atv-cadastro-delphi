@@ -1,0 +1,49 @@
+unit ProjetoAula;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnInserir: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Edit6: TEdit;
+    Label6: TLabel;
+    ComboBox2: TComboBox;
+    RadioGroup1: TRadioGroup;
+    Label7: TLabel;
+    GroupBox1: TGroupBox;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    Label8: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
